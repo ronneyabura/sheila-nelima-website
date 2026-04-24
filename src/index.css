@@ -1,0 +1,51 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #0D0D0D;
+  --white: #F7F5F0;
+  --gold: #C9A84C;
+  --gold-light: #E8D49A;
+  --gold-dark: #8A6A1E;
+  --surface: #161614;
+  --card: #1E1E1B;
+  --card-hover: #252520;
+  --border: rgba(201, 168, 76, 0.18);
+  --border-subtle: rgba(247, 245, 240, 0.08);
+  --muted: rgba(247, 245, 240, 0.55);
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--black);
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+}
