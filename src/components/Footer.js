@@ -34,13 +34,7 @@ export default function Footer() {
         SN Finance
       </span>
 
-      <p
-        style={{
-          fontSize: "0.78rem",
-          color: "var(--muted)",
-          fontWeight: 300,
-        }}
-      >
+      <p style={{ fontSize: "0.78rem", color: "var(--muted)", fontWeight: 300 }}>
         © {year} Sheila Nelima Finance Consultancy. All rights reserved.
       </p>
 
