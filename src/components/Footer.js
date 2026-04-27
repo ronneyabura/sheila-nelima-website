@@ -1,5 +1,11 @@
 import React from "react";
 
+const footerLinks = [
+  { label: "LinkedIn", href: "https://linkedin.com/in/sheilla-nelima" },
+  { label: "Email", href: "mailto:snelima2019@gmail.com" },
+  { label: "WhatsApp", href: "https://wa.me/254741377062" },
+];
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -39,21 +45,24 @@ export default function Footer() {
       </p>
 
       <div style={{ display: "flex", gap: "1.5rem" }}>
-        {["LinkedIn", "Email", "WhatsApp"].map((link) => (
-          <a
-            key={link}
-            href="#"
+        {footerLinks.map(({ label, href }) => (
+          
+            key={label}
+            href={href}
+            target={href.startsWith("http") ? "_blank" : undefined}
+            rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
             style={{
               fontSize: "0.75rem",
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               color: "var(--muted)",
               transition: "color 0.2s",
+              textDecoration: "none",
             }}
             onMouseEnter={(e) => (e.target.style.color = "var(--gold)")}
             onMouseLeave={(e) => (e.target.style.color = "var(--muted)")}
           >
-            {link}
+            {label}
           </a>
         ))}
       </div>
