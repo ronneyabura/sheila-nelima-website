@@ -1,93 +1,70 @@
-{/* Right: Portrait placeholder */}
-      <div style={{ position: "relative", display: "flex", justifyContent: "center" }}>
+import React from "react";
+
+export default function Hero() {
+  const scrollTo = (id) =>
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
+  return (
+    <section
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        padding: "8rem 6vw 5rem",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      {/* Background glow */}
+      <div
+        style={{
+          position: "absolute",
+          top: "-15%",
+          right: "-5%",
+          width: "550px",
+          height: "550px",
+          borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%)",
+          pointerEvents: "none",
+        }}
+      />
+
+      <div style={{ maxWidth: "700px" }}>
         <div
           style={{
-            width: "100%",
-            maxWidth: "420px",
-            aspectRatio: "3/4",
-            background: "linear-gradient(145deg, var(--card) 0%, #252520 100%)",
-            border: "0.5px solid var(--border)",
-            position: "relative",
-            display: "flex",
-            flexDirection: "column",
+            display: "inline-flex",
             alignItems: "center",
-            justifyContent: "center",
-            gap: "1rem",
+            gap: "0.75rem",
+            fontSize: "0.72rem",
+            letterSpacing: "0.2em",
+            textTransform: "uppercase",
+            color: "var(--gold)",
+            fontWeight: 500,
+            marginBottom: "1.75rem",
           }}
         >
-          <div
-            style={{
-              width: "100px",
-              height: "100px",
-              borderRadius: "50%",
-              background: "rgba(201,168,76,0.1)",
-              border: "1.5px solid var(--gold)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontFamily: "var(--font-display)",
-              fontSize: "2.2rem",
-              fontWeight: 700,
-              color: "var(--gold)",
-            }}
-          >
-            SN
-          </div>
-          <p
-            style={{
-              fontSize: "0.72rem",
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
-              color: "rgba(247,245,240,0.3)",
-            }}
-          >
-            Replace with your photo
-          </p>
-
-          {/* Gold badge */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: "-1.25rem",
-              left: "-1.25rem",
-              background: "var(--gold)",
-              color: "var(--black)",
-              padding: "1rem 1.25rem",
-            }}
-          >
-            <strong
-              style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "1.6rem",
-                fontWeight: 700,
-                display: "block",
-                lineHeight: 1,
-              }}
-            >
-              CPA
-            </strong>
-            <span
-              style={{
-                fontSize: "0.68rem",
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-              }}
-            >
-              Certified
-            </span>
-          </div>
-
-          {/* Corner accent */}
-          <div
-            style={{
-              position: "absolute",
-              top: "-1.25rem",
-              right: "-1.25rem",
-              width: "60px",
-              height: "60px",
-              borderTop: "2px solid var(--gold)",
-              borderRight: "2px solid var(--gold)",
-            }}
-          />
+          <span style={{ display: "block", width: "28px", height: "1px", background: "var(--gold)" }} />
+          Finance Consultancy · Nairobi
         </div>
-      </div>
+
+        <h1
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(3rem, 6vw, 6.5rem)",
+            fontWeight: 700,
+            lineHeight: 1.0,
+            letterSpacing: "-0.01em",
+            marginBottom: "1.5rem",
+          }}
+        >
+          Financial
+          <br />
+          <em style={{ fontStyle: "italic", color: "var(--gold)" }}>Clarity.</em>
+          <br />
+          Strategic{" "}
+          <em style={{ fontStyle: "italic", color: "var(--gold)" }}>Growth.</em>
+        </h1>
+
+        <p
+          style={{
