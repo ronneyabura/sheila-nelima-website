@@ -98,8 +98,8 @@ export default function Contact() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             {[
-              { label: "Email", value: "sheila@snfinance.co.ke" },
-              { label: "Phone / WhatsApp", value: "+254 700 000 000" },
+              { label: "Email", value: "snelima2019@gmail.com" },
+              { label: "Phone / WhatsApp", value: "+254 741 377 062" },
               { label: "Location", value: "Nairobi, Kenya" },
               { label: "Hours", value: "Mon – Fri, 8am – 6pm EAT" },
             ].map(({ label, value }) => (
@@ -174,7 +174,7 @@ export default function Contact() {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    placeholder="Jane Kamau"
+                    placeholder="Sheila Nelima"
                     style={inputStyle}
                     onFocus={(e) => (e.target.style.borderColor = "var(--gold)")}
                     onBlur={(e) => (e.target.style.borderColor = "var(--border-subtle)")}
@@ -188,7 +188,7 @@ export default function Contact() {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    placeholder="jane@company.co.ke"
+                    placeholder="sheilanelima@gmail.com"
                     style={inputStyle}
                     onFocus={(e) => (e.target.style.borderColor = "var(--gold)")}
                     onBlur={(e) => (e.target.style.borderColor = "var(--border-subtle)")}
